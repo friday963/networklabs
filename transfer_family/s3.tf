@@ -1,3 +1,10 @@
+locals {
+  s3_folders = [
+    "router_1",
+    "router_2"
+  ]
+}
+
 /* 
 This is a random integer resource that will be used to generate a random number between 1000 and 9999.
 */
@@ -19,3 +26,9 @@ resource "aws_s3_bucket" "example_bucket" {
   }
 }
 
+# Loops through variable declaration above and creates multiple folders in the S3 bucket
+resource "aws_s3_object" "router_logs" {
+  for_each = { for idx, folder_name in local.s3_folders : idx => folder_name }
+  bucket = aws_s3_bucket.example_bucket.id
+  key = "${each.value}/"
+}

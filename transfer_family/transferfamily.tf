@@ -20,6 +20,7 @@ resource "aws_transfer_user" "transfer_user" {
   server_id = aws_transfer_server.network_logging_server.id
   user_name = "transfer_user"
   role = aws_iam_role.transfer_role.arn
+  home_directory = "${join("", ["/", aws_s3_bucket.example_bucket.id, "/", local.s3_folders[0], "/"])}"
   tags = {
     Name = var.project_tag
   }
