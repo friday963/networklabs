@@ -2,3 +2,5 @@
 *.hcl
 *.tfstate
 .terraform/
+containerlab_configs/clab-SFTP_Sample_Lab/
+*.bak

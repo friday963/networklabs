@@ -1,0 +1,7 @@
+name: SFTP_Sample_Lab 
+
+topology:
+  nodes:
+    router:
+      kind: ceos
+      image: ceos:4.30.3M
