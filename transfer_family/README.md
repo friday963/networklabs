@@ -8,7 +8,7 @@
 
 ## Project Description <a name = "about"></a>
 
-This is the code companion used in this wiki "TODO: Add link" to deploy out the neccessary infrastructure for the transfer family suite of tools. 
+This is the code companion used in this wiki https://dev.to/friday963/aws-transfer-family-for-network-engineers-4fmf to deploy out the neccessary infrastructure for the transfer family suite of tools. 
 
 ## Resources Deployed <a name = "resources"></a>
 
